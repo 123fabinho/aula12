@@ -33,6 +33,7 @@ export class CadastroLivroComponent implements OnInit {
       autor: ['', [Validators.required]]
     })
   }
+}
 
 
 

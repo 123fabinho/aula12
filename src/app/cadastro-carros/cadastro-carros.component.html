@@ -1,0 +1,41 @@
+
+
+ <nav class="nav flex-column">
+  <a class="nav-link active" href="#">login</a>
+  <a class="nav-link" href="#">acesso</a>
+  <a class="nav-link" href="#">Fotos</a>
+  <a class="nav-link disabled" href="#">Aluga</a>
+</nav>
+
+<div class="container">
+
+  <h1>Cadastro de carros </h1>
+
+  <form [formGroup]="formGroup" (ngSubmit)="cadastrar()" class="form-group">
+
+    <label>id</label>
+    <input type="text" name="id" class="form-control" formControlName="id" />
+    <p *ngIf="formGroup.controls.id.dirty && formGroup.controls.id.erros">Valor Inválido</p>
+  
+    <label>modelo</label>
+    <input type="text" name="modelo" class="form-control" formControlName="modelo" />
+    <p *ngIf="formGroup.controls.modelo.dirty && formGroup.controls.modelo.erros">Valor Inválido</p>
+
+
+    <label>marca</label>
+    <input type="text" name="marca" class="form-control" formControlName="marca" />
+    <p *ngIf="formGroup.controls.marca.dirty && formGroup.controls.marca.erros">Valor Inválido</p>
+
+    <label>ano </label>
+    <input type="text" name="ano" class="form-control" formControlName="ano" />
+    <p *ngIf="formGroup.controls.ano.dirty && formGroup.controls.ano.erros">Valor Inválido</p> 
+
+    <label>preco </label>
+    <input type="text" name="preco" class="form-control" formControlName="preco" />
+    <p *ngIf="formGroup.controls.preco.dirty && formGroup.controls.preco.erros">Valor Inválido</p>
+
+    <button style="margin-top: 25px;" type="submit" class="btn btn-outline-success form-control" [disabled]="formGroup.invalid">Cadastrar</button>
+
+  </form>
+ 
+</div>
